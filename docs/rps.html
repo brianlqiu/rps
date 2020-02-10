@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Rock Paper Scissors</title> 
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body> 
+        <h1>Rock, Paper, Scissors!</h1>
+        <h2>Click on a picture to play!</h2>
+        <h2 id="playerScore">Your score: 0</h2>
+        <h2 id="compScore">Computer score: 0</h2>
+        <input type="image" src="rock.png" onclick="play('Rock', computerPlay())">
+        <input type="image" src="paper.png" onclick="play('Paper', computerPlay())">
+        <input type="image" src="scissors.png" onclick="play('Scissors', computerPlay())">
+        <div id="compChoiceContainer"></div>
+        <script src="rps.js"></script>
+    </body>
+</html>
