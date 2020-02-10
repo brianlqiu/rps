@@ -1,0 +1,15 @@
+h1 {
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+}
+
+input {
+    margin: 50px 50px 50px 50px;
+    max-width: 33vw;
+    max-height: 33vh;
+    height: auto;
+    width: auto;
+}

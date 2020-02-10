@@ -3,55 +3,17 @@
     <head>
         <meta charset="utf-8">
         <title>Rock Paper Scissors</title> 
+        <link rel="stylesheet" type="text/css" href="style.css">
     </head>
     <body> 
-        <script>
-            function computerPlay() {
-                switch (Math.floor(Math.random() * 3)) {
-                    case 0:
-                        return "rock";
-                        break;
-                    case 1:
-                        return "paper";
-                        break;
-                    case 2:
-                        return "scissors";
-                        break;
-                }
-            }
-            
-            function play(playerSelection, computerSelection) {
-                let player = playerSelection.toLowerCase();
-                if(player === computerSelection) {
-                    alert("tie! you both chose " + player);
-                    return 0;
-                } else if(player < computerSelection || (player === "scissors" && computerSelection === "paper")) {
-                    alert("you win! " + player + " beats " + computerSelection);
-                    return 1;
-                } else {
-                    alert("you lose! " + computerSelection + " beats " + player);
-                    return -1;
-                }
-            }
-
-            function game() {
-                let playerScore = 0;
-                let compScore = 0;
-                for(let i = 0; i < 5; i++) {
-                    let result = play(prompt("Choose rock, paper, or scissors"), computerPlay());
-                    if( result == 1) {
-                        playerScore++;
-                    } else if(result == -1) {
-                        compScore++;
-                    }
-                }
-                if(playerScore > compScore) {
-                    alert("player wins with a score of " + playerScore);
-                } else {
-                    alert("computer wins with a score of " + compScore);
-                }
-            }
-
-        </script>
+        <h1>Rock, Paper, Scissors!</h1>
+        <h2>Click on a picture to play!</h2>
+        <p id="playerScore">Your score: 0</p>
+        <p id="compScore">Computer score: 0</p>
+        <input type="image" src="rock.png" onclick="play('Rock', computerPlay())">
+        <input type="image" src="paper.png" onclick="play('Paper', computerPlay())">
+        <input type="image" src="scissors.png" onclick="play('Scissors', computerPlay())">
+        <div id="compChoiceContainer"> </div>
+        <script src="rps.js"></script>
     </body>
 </html>
